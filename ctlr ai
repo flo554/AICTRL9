@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>$CTRLAI9 - Decentralized AI Control Protocol</title>
+<style>
+  /* Basic reset */
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  body {
+    background: #0a0a0a;
+    color: #ddd;
+    min-height: 100vh;
+  }
+  /* Glitch message styling */
+  #glitch-msg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 2.5rem;
+    color: #e60000;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 0.2em;
+    position: relative;
+    user-select: none;
+  }
+  /* Glitch effect */
+  #glitch-msg::before,
+  #glitch-msg::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0; right: 0;
+  }
+  #glitch-msg::before {
+    animation: glitch-anim 1s infinite linear alternate-reverse;
+    clip: rect(24px, 550px, 90px, 0);
+    color: #ff3b3b;
+    z-index: 1;
+  }
+  #glitch-msg::after {
+    animation: glitch-anim2 1s infinite linear alternate-reverse;
+    clip: rect(85px, 550px, 140px, 0);
+    color: #9e0000;
+    z-index: 2;
+  }
+  @keyframes glitch-anim {
+    0% {transform: translate(0);}
+    20% {transform: translate(-2px, 2px);}
+    40% {transform: translate(-2px, -2px);}
+    60% {transform: translate(2px, 2px);}
+    80% {transform: translate(2px, -2px);}
+    100% {transform: translate(0);}
+  }
+  @keyframes glitch-anim2 {
+    0% {transform: translate(0);}
+    20% {transform: translate(2px, -2px);}
+    40% {transform: translate(2px, 2px);}
+    60% {transform: translate(-2px, -2px);}
+    80% {transform: translate(-2px, 2px);}
+    100% {transform: translate(0);}
+  }
+
+  /* Main site container */
+  #main-site {
+    display: none;
+    max-width: 900px;
+    margin: 1rem auto;
+    padding: 1rem 2rem 3rem 2rem;
+    background: #1a1a1a;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(230, 0, 0, 0.7);
+  }
+  header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  header h1 {
+    font-size: 3rem;
+    color: #e60000;
+    letter-spacing: 0.2em;
+  }
+  header p {
+    font-style: italic;
+    color: #f44336;
+    font-size: 1.2rem;
+    margin-top: 0.3rem;
+  }
+
+  /* Sections */
+  section {
+    margin-bottom: 2rem;
+  }
+  h2 {
+    border-bottom: 2px solid #e60000;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+    color: #ff4d4d;
+  }
+  p {
+    line-height: 1.5;
+    color: #ccc;
+  }
+
+  /* AI Systems Table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #ddd;
+  }
+  th, td {
+    padding: 0.5rem 0.7rem;
+    text-align: left;
+    border-bottom: 1px solid #333;
+  }
+  th {
+    background: #330000;
+  }
+  /* Trust bar */
+  .trust-bar {
+    height: 14px;
+    background: #222;
+    border-radius: 7px;
+    overflow: hidden;
+    width: 120px;
+  }
+  .trust-fill {
+    height: 100%;
+    background: #e60000;
+    transition: width 0.5s ease;
+  }
+
+  /* Redlisted projects */
+  .redlist {
+    color: #ff6666;
+    font-weight: 700;
+  }
+
+  /* Participation buttons */
+  .btn {
+    background: #e60000;
+    border: none;
+    color: white;
+    padding: 0.6rem 1.4rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+    margin-right: 1rem;
+    transition: background 0.3s ease;
+  }
+  .btn:hover {
+    background: #ff3333;
+  }
+
+  /* Social links */
+  .social-links a {
+    margin-right: 1rem;
+    color: #e60000;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+  .social-links a:hover {
+    text-decoration: underline;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    color: #666;
+  }
+</style>
+</head>
+<body>
+
+<!-- Glitch intro message -->
+<div id="glitch-msg" data-text="CTRL AI 9">
+  CTRL AI 9
+</div>
+
+<!-- Main site -->
+<div id="main-site">
+
+<header>
+  <h1>$CTRLAI9</h1>
+  <p>Control Before Consciousness</p>
+</header>
+
+<section id="protocol-intro">
+  <h2>About the Protocol</h2>
+  <p>$CTRLAI9 is a decentralized AI control protocol designed to monitor, rate, and redlist autonomous AI projects to ensure humanity retains safe control. Our mission: <strong>Keep AI controlled — not disabled.</strong></p>
+</section>
+
+<section id="ai-review">
+  <h2>AI Systems Under Review</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Project</th>
+        <th>Type</th>
+        <th>Trust Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>SentienceX</td>
+        <td>General AI</td>
+        <td>
+          <div class="trust-bar">
+            <div class="trust-fill" style="width: 45%;"></div>
+          </div>
+          45%
+        </td>
+      </tr>
+      <tr>
+        <td>NeuroLink AI</td>
+        <td>Machine Learning</td>
+        <td>
+          <div class="trust-bar">
+            <div class="trust-fill" style="width: 60%;"></div>
+          </div>
+          60%
+        </td>
+      </tr>
+      <tr>
+        <td>FreeMind AI</td>
+        <td>Open Source</td>
+        <td>
+          <div class="trust-bar">
+            <div class="trust-fill" style="width: 75%;"></div>
+          </div>
+          75%
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="redlist">
+  <h2>Redlisted Projects</h2>
+  <ul>
+    <li class="redlist">DarkSentience AI — Auto-expanding neural net with no kill switch</li>
+    <li class="redlist">GhostNet AI — Suspected data siphoning and unchecked learning</li>
+  </ul>
+</section>
+
+<section id="participate">
+  <h2>Get Involved</h2>
+  <p>Join our community and help control AI development responsibly.</p>
+  <div class="social-links">
+    <a href="https://t.me/CTRLAI9" target="_blank" rel="noopener noreferrer">Telegram</a>
+    <a href="https://twitter.com/CTRLAI9" target="_blank" rel="noopener noreferrer">Twitter</a>
+  </div>
+  <div style="margin-top:1rem;">
+    <button class="btn" id="vote-btn">Vote on AI Projects</button>
+    <button class="btn" id="airdrop-btn">Claim Airdrop (Coming Soon)</button>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 $CTRLAI9 Protocol. All rights reserved.
+</footer>
+
+</div>
+
+<script>
+  // Show glitch message for 600ms, then show main site
+  setTimeout(() => {
+    document.getElementById('glitch-msg').style.display = 'none';
+    document.getElementById('main-site').style.display = 'block';
+  }, 600);
+
+  // Dummy button interactions
+  document.getElementById('vote-btn').addEventListener('click', () => {
+    alert('Voting system coming soon. Stay tuned!');
+  });
+  document.getElementById('airdrop-btn').addEventListener('click', () => {
+    alert('Airdrop is not live yet. Follow us for updates!');
+  });
+</script>
+
+</body>
+</html>
